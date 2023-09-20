@@ -109,7 +109,7 @@ int main(){
 
 // REVERSE AN ARRAY
 
-    int a[]={1,2,3,4,5,6,7,8,9};
+    int a[]={1,2,3,4,5,6,8,9,7};
     int size = 9;
     int start = 0;
     int end = size-1;
@@ -122,10 +122,6 @@ int main(){
     for(int i=0;i<size;i++){
         cout<<a[i]<<" ";
     }
-
-
-
-    
 
 
     return 0;
