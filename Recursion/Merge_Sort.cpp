@@ -6,7 +6,7 @@ using namespace std;
 void merge(int *arr, int s, int e){
     int mid = s + (e-s)/2;
     
-    int len1 = mid - s+1; // Length of array one after seperation 
+    int len1 = mid - s + 1; // Length of array one after seperation 
     int len2 = e- mid; // length of array two after seperation 
     
     int *first = new int[len1];
@@ -41,20 +41,28 @@ void merge(int *arr, int s, int e){
 }
 
 void mergeSort(int *arr, int s, int e){
+    //Base Case
     if(s>=e)
         return;
+    
     int mid= s + (e-s)/2;
 
-    mergeSort(arr, s,mid);
+    mergeSort(arr, s, mid);
 
-    mergeSort(arr, mid+1,e);
+    mergeSort(arr, mid+1, e);
 
-    merge(arr, s,e);
+    merge(arr, s, e);
 }
 
 
 int main(){
-    
+    int arr[5] = {3,4,5,1,2};
+    int n =5;
+    mergeSort(arr,0,n-1);
+    for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+
+    }
     
 
 return 0;
