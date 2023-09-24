@@ -49,7 +49,7 @@ void quickSort(int *arr, int s, int e){
 }
 
 int main(){
-    int arr[5] = {3,4,2,1,7};
+    int arr[5] = {3,4,3,7,7};
     int n = 5;
 
     quickSort(arr,0,n-1);
