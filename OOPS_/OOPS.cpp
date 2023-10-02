@@ -9,12 +9,24 @@ using namespace std;
 class hero {
     //Properties
     private: // Access modifier: Private --> Acessable only in the private modifier
+    
+    
     int health;
     char level;
     string game;
 
 
     public: // Access modifier: Public --> Accesable anywhere in the program
+    
+    // Constructor
+
+    hero(){
+        cout<<"Rocky"<<endl;
+    }
+    
+    
+    
+    
     string name;
 
     // Getter and setter: 
@@ -44,6 +56,13 @@ class hero {
 
 int main(){
     hero h1;
+    
+    
+    
+    
+    
+    
+    
     h1.name = "Rocky";
     h1.setlevel('A');
     h1.sethealth(100);
