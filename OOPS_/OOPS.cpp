@@ -51,12 +51,21 @@ class hero {
     string getgame(){
         return game;
     }
+    
+
+
+    
+
+
 };
 
 
 int main(){
     hero h1;
-    
+    hero h2(h1);
+
+    h2.getgame();
+
     
     
     
