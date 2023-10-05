@@ -54,6 +54,7 @@ class employee {
     
     // Copy Constructor
     employee(employee &temp){
+        cout<<"Copy constructor called"<<endl;
         this ->name = temp.name;
         this -> salary = temp.salary; 
     }
