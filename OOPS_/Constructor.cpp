@@ -58,30 +58,34 @@ class employee {
         this ->name = temp.name;
         this -> salary = temp.salary; 
     }
-    
 
+    //Destructor 
+    ~employee(){
+        cout<<"Destructor called"<<endl;
+    }
 
+    //Static member
+    static int officetime;
 };
 
+// initialising Static member
+int employee::officetime = 1000;
+
 int main(){
+    cout<<employee::officetime;
     
-    employee e1(500000, "Ramesh");
-    e1.print();
-    // Copy constructor - one type
-    employee e2(e1);
-    e2.print();
+    
+    // employee e1(500000, "Ramesh");
+    // e1.print();
+    // // Copy constructor - one type
+    // employee e2(e1);
+    // e2.print();
 
     
 
 
     
-    
-    
-    
-    
-    
-    
-    
+
     
     // Static Allocation
     
