@@ -1,13 +1,13 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-
+// This method should be known but major use case will be STL stack
 class Stack {
-    public:
+    private:     // Use of abstraction 
         int *arr;
         int size;
         int top;
-
+    public:
         Stack(int size){
             arr = new int[size];
             this->size = size;
