@@ -43,6 +43,15 @@ int main(){
     s.push(40);
     s.push(50);
 
+    if(s.empty()){
+        cout<<"Stack is empty"<<endl;
+        return 0;
+    }
+
+    int target = s.top();
+    s.pop();
+    insertAtBottom(s, target);
+
 
     reverseStack(s);
 

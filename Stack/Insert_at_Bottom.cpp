@@ -2,8 +2,9 @@
 #include<stack>
 using namespace std;
 
-void solve(stack<int> &s, int target){
-    // base case
+
+void insertAtBottom(stack<int> &s, int &target){
+   // base case
     if(s.empty()){
         s.push(target);
         return;
@@ -13,22 +14,10 @@ void solve(stack<int> &s, int target){
     s.pop();
 
     // Recursive Call
-    solve(s,target);
+    insertAtBottom(s,target);
 
     // BackTracking
     s.push(topElement);
-}
-
-void insertAtBottom(stack<int> &s){
-    if(s.empty()){
-        cout<<"empty Stack"<<endl;
-    }
-
-
-    int target = s.top();
-    s.pop();
-
-    solve(s,target);
 }
 
 
@@ -42,7 +31,15 @@ int main(){
     s.push(40);
     s.push(100);
 
-    insertAtBottom(s);
+    if(s.empty()){
+        cout<<"Stack is empty"<<endl;
+        return 0;
+    }
+
+    int target = s.top();
+    s.pop();
+    insertAtBottom(s, target);
+    cout<<"printing"<<endl;
 
     while(!s.empty()){
         cout<<s.top()<<" ";
