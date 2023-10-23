@@ -64,5 +64,15 @@ int main(){
 
     interleaveQ(q);
 
+    // Printitng the queue
+
+    cout<<"Printing"<<endl;
+
+    while(!q.empty()){
+        cout<<q.front()<<" ";
+        q.pop();
+    }
+    cout<<endl;
+
 return 0;
 }
