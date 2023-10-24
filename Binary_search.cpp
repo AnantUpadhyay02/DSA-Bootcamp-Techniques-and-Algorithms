@@ -1,18 +1,19 @@
 #include<iostream>
+#include<vector>
 #include<algorithm>
 
 using namespace std;
 
 int BinarySearch(vector<int> &a, int target){
     int n = a.size();
-    int low = 0; high = n-1;
+    int low = 0, high = n-1;
 
     while(low<=high){
         int mid = low+ (high - low)/2;
         if(a[mid]== target){
             return mid;
         }
-        if( arr[mid]< target){
+        if( a[mid]< target){
             low = mid+1;
         }else
             high = mid-1;
@@ -21,11 +22,11 @@ int BinarySearch(vector<int> &a, int target){
 }
 
 int main(){
-    vector<int>arr;
-    int n = arr.size();
+    vector<int> a;
+    int n = a.size();
     cin>>n;
     for(int i = 0; i<n; i++){
-        cin>> arr[i];
+        cin>> a[i];
     }
     int target;
     cin>> target;
