@@ -22,14 +22,16 @@ int BinarySearch(vector<int> &a, int target){
 }
 
 int main(){
+    
     vector<int> a;
+    int target;
+    cin>> target;
     int n = a.size();
     cin>>n;
     for(int i = 0; i<n; i++){
         cin>> a[i];
     }
-    int target;
-    cin>> target;
+    
 
 
 return 0;
