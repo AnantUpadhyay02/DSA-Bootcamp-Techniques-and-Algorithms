@@ -38,12 +38,26 @@ Node* buildTree(){
     return root;
 }
 
+int maxDepth(Node*root){
+    if(root==NULL)
+        return 0;
+
+    int leftHeight = maxDepth(root->left);
+    int rightHeight = maxDepth(root->right);
+
+    int ans = max(leftHeight,rightHeight) +1;
+
+    return ans; 
+}
+
 
 
 
 int main(){
     Node* root = NULL;
     root = buildTree();
+
+    cout<<" the max depth of the tree is: "<<maxDepth(root)<<endl;
 
 
 return 0;
