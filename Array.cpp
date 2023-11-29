@@ -1,6 +1,6 @@
 #include<iostream>
 #include<limits.h>
-
+#include<vector>
 using namespace std;
 // void printarray(int a[], int size){
 //     for(int i=0 ; i<size; i++){
@@ -27,6 +27,14 @@ using namespace std;
 //     }
 //     return false;
 // }
+
+// function to print a vector
+
+void printVector(vecto<int>&arr){
+    for(int i=0;i<arr.size();i++){
+        cout<<arr[i]<<" ";
+    }
+}
 
 
 int main(){
